@@ -14,6 +14,7 @@ describe('Prueba login DALIH', () =>{
 
         cy.get('.ant-btn-primary').type("Cerrar sesión").type("{enter}")
    
+    
   
         
     })

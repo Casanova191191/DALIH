@@ -2,7 +2,7 @@
 
 
 describe('Prueba login DALIH', () =>{
-    it("Login DALIH", () =>{
+    it.only("Login DALIH", () =>{
         cy.visit('https://dalih.app/login-dalih')
         cy.get('#email').type("casanova9812@gmail.com")
         cy.wait(1000)
@@ -37,10 +37,10 @@ describe('Prueba login DALIH', () =>{
         cy.get(':nth-child(3) > .ant-row > .ant-col-16 > .ant-form-item-control-input > .ant-form-item-control-input-content > .ant-ribbon-wrapper > .ant-btn').click()
         cy.wait(2000)
         //boton tipo de identificación 
-        cy.get(':nth-child(31) > .ant-drawer > .ant-drawer-content-wrapper > .ant-drawer-content > .ant-drawer-wrapper-body > .ant-drawer-body > :nth-child(1) > [style="background: rgb(226, 226, 226);"] > .ant-row > :nth-child(3) > .ant-btn').click()
+        cy.get('#single-populate--id_type__0').click()
         cy.wait(1000)
         //cerrar tipo de identificación
-        cy.get('anticon anticon-close').click()
+        cy.get(':nth-child(31) > .ant-drawer > .ant-drawer-content-wrapper > .ant-drawer-content > .ant-drawer-wrapper-body > .ant-drawer-header > .ant-drawer-header-title > .ant-drawer-close').click()
         cy.wait(1000)
 
         //Identificacón 
@@ -62,7 +62,7 @@ describe('Prueba login DALIH', () =>{
 
 //*************************************************************************************************************/
 
-    it.only(" Otras funcionalidades de clientes  ", () =>{
+    it(" Otras funcionalidades de clientes  ", () =>{
         cy.visit('https://dalih.app/login-dalih')
         cy.get('#email').type("casanova9812@gmail.com")
         cy.wait(1000)
