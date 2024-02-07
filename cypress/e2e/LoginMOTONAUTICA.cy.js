@@ -2,13 +2,14 @@
 
 describe('Prueba login DALIH', () =>{
     it.only("Login DALIH", () =>{
-        cy.visit('https://dalih.app/login-dalih')
-        cy.get('#email').type("casanova9812@gmail.com")
+        cy.visit('https://motonautica-web.herokuapp.com/')
         cy.wait(1000)
-        cy.get('#password').type("12345")         
+        cy.get('#basic_username').type("dianacasanova02@gmail.com")
         cy.wait(1000)
-        cy.get('.ant-form-item-control-input-content > .ant-btn').click()       
-        cy.wait(3000)   
+        cy.get('#basic_password').type("1234")         
+        cy.wait(1000)
+        cy.get('.ant-btn').click()       
+        cy.wait(1000)
 
         // //***********************CERRAR SESIÓN *********************************
 
